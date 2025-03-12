@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://assetsio.gnwcdn.com/xboxwall.jpeg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-attachment: fixed; /* A imagem ficará fixa durante o rolar da página */
+    color: #fff; /* Texto branco para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(27, 29, 31, 0.8); /* Fundo semi-transparente para contraste */
+    border-radius: 10px; /* Bordas arredondadas na área do menu */
+}
+
+.centralizado ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
+    justify-content: center; /* Garante que os itens fiquem centralizados */
+}
+
+.centralizado li {
+    display: inline-block;
+}
+
+.centralizado a {
+    text-decoration: none;
+    color: #fff; /* Texto branco */
+    font-size: 18px;
+    width: 100px; /* Largura fixa de 100px */
+    height: 100px; /* Altura de 100px para torná-los quadrados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: rgba(27, 29, 31, 0.7); /* Fundo escuro semi-transparente */
+    border: 2px solid transparent; /* Borda invisível inicialmente */
+    transition: background-color 0.3s, color 0.3s, border 0.3s, transform 0.2s; /* Transição suave */
+}
+
+/* Efeitos de hover, foco e clique */
+.centralizado a:hover,
+.centralizado a:focus {
+    background-color: #44d200; /* Fundo verde */
+    color: #000; /* Texto preto */
+    border-color: #44d200; /* Contorno verde */
+    transform: scale(1.05); /* Efeito de aumento suave */
+}
+
+.centralizado a:active {
+    background-color: #333; /* Fundo escuro ao clicar */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .centralizado ul {
+        flex-direction: column; /* Empilha os itens em telas menores */
+    }
+
+    .centralizado a {
+        width: 100px; /* Largura fixada para 100px em dispositivos menores */
+        height: 100px; /* Altura fixada para 100px em dispositivos menores */
+        font-size: 16px; /* Tamanho da fonte ajustado */
+    }
+}
+
+@media (max-width: 480px) {
+    .centralizado a {
+        width: 100px; /* Largura fixada para 100px em dispositivos menores */
+        height: 100px; /* Altura fixada para 100px em dispositivos menores */
+        font-size: 12px; /* Tamanho da fonte ajustado */
+    }
+}
