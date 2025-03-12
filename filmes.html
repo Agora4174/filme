@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Xbox Series S</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://assetsio.gnwcdn.com/xboxwall.jpeg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(27, 29, 31, 0.8);
+            border-radius: 10px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row; /* Itens dispostos horizontalmente */
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+            gap: 20px; /* Espaço entre os itens */
+        }
+
+        .menu-item {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .menu-item:hover, .menu-item.selected {
+            background-color: #333;
+            border-color: #44d200; /* Contorno verde quando selecionado ou em hover */
+        }
+
+        .menu-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item span {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .menu {
+                padding: 10px;
+                gap: 10px; /* Menor espaço entre os itens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu {
+                padding: 5px;
+                gap: 5px;
+            }
+
+            .menu-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu" id="menu">
+            <div class="menu-item" tabindex="1">
+                <img src="netflix-icon.png" alt="Netflix" class="menu-icon">
+                <span>Netflix</span>
+            </div>
+            <div class="menu-item" tabindex="2">
+                <img src="prime-icon.png" alt="Amazon Prime" class="menu-icon">
+                <span>Amazon Prime</span>
+            </div>
+            <div class="menu-item" tabindex="3">
+                <img src="disneyplus-icon.png" alt="Disney+" class="menu-icon">
+                <span>Disney+</span>
+            </div>
+            <div class="menu-item" tabindex="4">
+                <img src="hbo-icon.png" alt="HBO Max" class="menu-icon">
+                <span>HBO Max</span>
+            </div>
+            <div class="menu-item" tabindex="5">
+                <img src="youtube-icon.png" alt="YouTube" class="menu-icon">
+                <span>YouTube</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navegação com teclado
+        let menuItems = document.querySelectorAll('.menu-item');
+        let currentIndex = 0;
+
+        function selectItem(index) {
+            // Remove o foco do item anterior
+            menuItems[currentIndex].classList.remove('selected');
+            // Adiciona o foco no item atual
+            menuItems[index].classList.add('selected');
+            menuItems[index].focus();
+            currentIndex = index;
+        }
+
+        // Adiciona navegação com as setas
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                // Mover para a direita
+                if (currentIndex < menuItems.length - 1) {
+                    selectItem(currentIndex + 1);
+                }
+            } else if (e.key === 'ArrowLeft') {
+                // Mover para a esquerda
+                if (currentIndex > 0) {
+                    selectItem(currentIndex - 1);
+                }
+            } else if (e.key === 'Enter') {
+                // Acionar o link do item selecionado
+                window.location.href = menuItems[currentIndex].querySelector('a') ? menuItems[currentIndex].querySelector('a').href : '#';
+            }
+        });
+
+        // Inicializa o primeiro item como selecionado
+        selectItem(currentIndex);
+    </script>
+</body>
+</html>
