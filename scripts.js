@@ -65,3 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializar o primeiro item como foco
     menuItems[currentIndex].focus();
 });
+
+
+
+

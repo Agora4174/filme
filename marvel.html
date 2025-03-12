@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes X</title>
+    <style>
+        body {
+    background-color: #0f0f0f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Define 6 colunas */
+    gap: 15px;
+    max-width: 90%;
+    margin: 100px auto;
+    justify-items: center; /* Centraliza os itens dentro de cada grid */
+}
+
+.filme {
+    background-color: #1a1a1a;
+    padding: 15px;
+    
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 100%; /* Faz com que os itens se ajustem ao tamanho da grid */
+    max-width: 200px; /* Limita o tamanho do item */
+}
+
+.filme img {
+    width: 100%;
+    height: 300px;
+    aspect-ratio: 1/1; /* Mantém as imagens quadradas */
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.btn-assistir {
+    display: inline-block;
+    background-color: #0f0;
+    color: #000;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.filme:hover, .filme.selecionado {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0f0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 coluna para telas muito pequenas */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Cronologia Marvel Filmes</h1>
+
+    
+    
+    
+<div class="container">
+  <div class="filme" data-bg="#">
+    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/5/59/Captain_Marvel_%282018%29.jpg/220px-Captain_Marvel_%282018%29.jpg" alt="Capitão Marvel">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+<div class="filme" data-bg="#">
+    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/d/d8/Capit%C3%A3o_Am%C3%A9rica_O_Primeiro_Vingador_-_Poster.jpg/220px-Capit%C3%A3o_Am%C3%A9rica_O_Primeiro_Vingador_-_Poster.jpg" alt="Capitão América: O Primeiro Vingador">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+    
+<div class="filme" data-bg="#">
+    <img src="https://uauposters.com.br/media/catalog/product/1/6/161320140525-uau-posters-filmes-homem-de-ferro--iron-man--2.jpg" alt="Homem de Ferro">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://img.elo7.com.br/product/zoom/42E9DDE/poster-1-o-incrivel-hulk-2008-mdf-3mm-28x40cm-filmes.jpg" alt="O Incrível Hulk">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://img.elo7.com.br/product/zoom/26771F6/big-poster-filme-homem-de-ferro-2-lo04-tamanho-90x60-cm-iron-man.jpg" alt="Homem de Ferro 2">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://uauposters.com.br/media/catalog/product/1/9/198120140605-198120140605-uau-posters-filmes-thor--thor-.jpg" alt="Thor">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://br.web.img2.acsta.net/medias/nmedia/18/89/43/82/20052140.jpg" alt="Os Vingadores">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://img.elo7.com.br/product/zoom/267720C/big-poster-filme-homem-de-ferro-3-lo03-tamanho-90x60-cm-homem-de-ferro-3.jpg" alt="Homem de Ferro 3">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://img.elo7.com.br/product/zoom/26786FD/big-poster-filme-thor-o-mundo-sombrio-lo01-tamanho-90x60-cm-geek.jpg" alt="Thor: O Mundo Sombrio">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://http2.mlstatic.com/D_NQ_NP_468401-MLB20343104565_072015-O.webp" alt="Capitão América: O Soldado Invernal">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177684782/poster-guardioes-da-galaxia-aa738ddb.jpg" alt="Guardiões da Galáxia">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177685017/poster-vingadores-era-de-ultron-b-0d679e9c.jpg" alt="Vingadores: A Era de Ultron">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cdn.awsli.com.br/600x700/1610/1610163/produto/177684866/poster-homem-formiga-b-eab8129f.jpg" alt="Homem-Formiga">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177684675/poster-capitao-america-guerra-civil-e-3d1416c0.jpg" alt="Capitão América: Guerra Civil">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://img.elo7.com.br/product/zoom/2665600/big-poster-filme-doutor-estranho-lo01-tamanho-90x60-cm-nerd.jpg" alt="Doutor Estranho">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://pipocamoderna.com.br/storage/2017/04/guardians-of-the-galaxy.jpg" alt="Guardiões da Galáxia Vol. 2">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://uauposters.com.br/media/catalog/product/1/0/109820180226-uau-posters-filmes-spider-man-spiderman-homecoming.jpg" alt="Spider-Man: Homecoming">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://img.elo7.com.br/product/zoom/2678674/big-poster-filme-marvel-thor-ragnarok-lo02-tamanho-90x60-cm-thor.jpg" alt="Thor: Ragnarok">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-pantera-negra-c-pop-arte-poster/poparteskins2/15938530620/c67156a0ebebb34c5e770233df65f610.jpeg" alt="Pantera Negra">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177685204/poster-os-vingadores-guerra-infinita-a-7a2bd6fd.jpg" alt="Vingadores: Guerra Infinita">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://img.elo7.com.br/product/zoom/265F188/big-poster-filme-homem-formiga-2-lo03-tamanho-90x60-cm-marvel.jpg" alt="Ant-Man and the Wasp">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://m.media-amazon.com/images/I/81g9-QHsdYL._AC_UF1000,1000_QL80_.jpg" alt="Vingadores: Ultimato">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://ingresso-a.akamaihd.net/img/cinema/cartaz/21308-cartaz.jpg" alt="Spider-Man: Longe de Casa">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-viuva-negra-a-pop-arte-poster/poparteskins2/16017321693/32852fb83f1c24cf4599f8875a31c134.jpeg" alt="Viúva Negra">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://uauposters.com.br/media/catalog/product/3/4/347420211103-uau-posters-shang-chi-e-a-lenda-dos-aneis-marvel-filmes.jpg" alt="Shang-Chi e a Lenda dos Dez Anéis">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cinepop.com.br/wp-content/uploads/2021/08/eternos.jpg" alt="Eternos">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://uauposters.com.br/media/catalog/product/9/3/930720211216-uau-posters-spider-man-no-way-home-homem-aranha-sem-volta-pra-casa-filmes-7.jpg" alt="Homem-Aranha: Sem Volta para Casa">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177684761/poster-doutor-estranho-no-multiverso-da-loucura-c-b77109c3.jpg" alt="Doutor Estranho no Multiverso da Loucura">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://uauposters.com.br/media/catalog/product/cache/1/thumbnail/800x930/9df78eab33525d08d6e5fb8d27136e95/8/8/882620221026-uau-posters-thor-love-and-thunder-marvel-filmes.jpg" alt="Thor: Amor e Trovão">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-pantera-negra-wakanda-para-sempre-d-pop-arte-poster/poparteskins2/15971699447/fd68cff383d3357341fde93dfef543d6.jpeg" alt="Pantera Negra: Wakanda Para Sempre">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=107234" alt="Ant-Man and the Wasp: Quantumania">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+<div class="filme" data-bg="#">
+    <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/208108598/poster-guardioes-da-galaxia-vol-3-a-6ec474ef.jpg" alt="Guardiões da Galáxia Vol. 3">
+    <a href="#" class="btn-assistir">Assistir agora</a>
+</div>
+
+</div>
+
+   
+    <div class="filme" data-bg="#">
+    <a href="index.html" class="btn-assistir">Voltar</a>
+</div>
+
+
+
+    <script>
+        let filmes = document.querySelectorAll(".filme");
+        let indexSelecionado = 0;
+
+        function atualizarSelecao() {
+            filmes.forEach(filme => filme.classList.remove("selecionado"));
+            let filmeAtual = filmes[indexSelecionado];
+            filmeAtual.classList.add("selecionado");
+            filmeAtual.scrollIntoView({ behavior: "smooth", block: "center" });
+            
+            // Altera o fundo conforme a seleção pelo teclado
+            document.body.style.backgroundImage = `url(${filmeAtual.getAttribute("data-bg")})`;
+        }
+
+        document.addEventListener("keydown", function(event) {
+            let colunas = Math.floor(document.querySelector(".container").offsetWidth / filmes[0].offsetWidth);
+
+            if (event.key === "ArrowRight") {
+                if (indexSelecionado % colunas < colunas - 1 && indexSelecionado < filmes.length - 1) {
+                    indexSelecionado++;
+                }
+            } else if (event.key === "ArrowLeft") {
+                if (indexSelecionado % colunas > 0) {
+                    indexSelecionado--;
+                }
+            } else if (event.key === "ArrowDown") {
+                if (indexSelecionado + colunas < filmes.length) {
+                    indexSelecionado += colunas;
+                }
+            } else if (event.key === "ArrowUp") {
+                if (indexSelecionado - colunas >= 0) {
+                    indexSelecionado -= colunas;
+                }
+            } else if (event.key === "Enter") {
+                window.open(filmes[indexSelecionado].querySelector(".btn-assistir").href, "_blank");
+            }
+
+            atualizarSelecao();
+        });
+
+        atualizarSelecao();
+
+        filmes.forEach(filme => {
+            filme.addEventListener("mouseenter", function() {
+                document.body.style.backgroundImage = `url(${this.getAttribute("data-bg")})`;
+            });
+
+            filme.addEventListener("mouseleave", function() {
+                atualizarSelecao(); // Mantém a imagem do filme selecionado
+            });
+        });
+    </script>
+</body>
+</html>

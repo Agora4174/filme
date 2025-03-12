@@ -47,15 +47,13 @@ body {
     border-radius: 10px; /* Bordas arredondadas */
     background-color: rgba(27, 29, 31, 0.7); /* Fundo escuro semi-transparente */
     border: 2px solid transparent; /* Borda invisível inicialmente */
-    transition: background-color 0.3s, color 0.3s, border 0.3s, transform 0.2s; /* Transição suave */
+    transition: border 0.3s, transform 0.2s; /* Animação suave */
 }
 
 /* Efeitos de hover, foco e clique */
 .centralizado a:hover,
 .centralizado a:focus {
-    background-color: #44d200; /* Fundo verde */
-    color: #000; /* Texto preto */
-    border-color: #44d200; /* Contorno verde */
+    border-color: #44d200; /* Contorno verde quando hover ou foco */
     transform: scale(1.05); /* Efeito de aumento suave */
 }
 
